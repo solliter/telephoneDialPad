@@ -85,7 +85,7 @@ class TelephoneDialPadTest {
     @Description("Low - Tests if the program handles input with letters")
     @Test
     public void testInputWithLetters() {
-        List<String> combinations = TelephoneDialPad.retrieveCombinations("8a39");
+        List<String> combinations = TelephoneDialPad.retrieveCombinations("8a39B");
         List<String> expectedCombinations = List.of("TW", "TX", "TY", "TZ", "UW", "UX", "UY", "UZ", "VW", "VX", "VY", "VZ");
         assertEquals(expectedCombinations, combinations);
     }
