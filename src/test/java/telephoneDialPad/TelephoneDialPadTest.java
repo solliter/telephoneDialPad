@@ -53,9 +53,8 @@ class TelephoneDialPadTest {
     public void testWithLongSequenceOfDigits() {
         List<String> combinations = TelephoneDialPad.retrieveCombinations("5555555555");
         List<String> expectedCombinations = List.of("JJJJJJJJJJ", "JJJJJJJJJK", "JJJJJJJJJL", "JJJJJJJJKJ", "JJJJJJJJKK",
-                "JJJJJJJJKL", "JJJJJJJJLJ", "JJJJJJJJLK", "JJJJJJJJLL", "JJJJJJJKJJ", "JJJJJJJKJK", "JJJJJJJKJL", "JJJJJJJKKJ",
-                "etc");
-        assertEquals(expectedCombinations, combinations);
+                "JJJJJJJJKL", "JJJJJJJJLJ", "JJJJJJJJLK", "JJJJJJJJLL", "JJJJJJJKJJ", "JJJJJJJKJK", "JJJJJJJKJL", "JJJJJJJKKJ");
+        assertTrue(combinations.containsAll(expectedCombinations));
     }
 
     @Description("Low - Tests if the program handles spaces in the input.")
@@ -74,7 +73,7 @@ class TelephoneDialPadTest {
                 "RS", "SP", "SQ", "SR", "SS");
         assertEquals(expectedCombinations, combinations);
     }
-    
+
     @Description("Low -  Tests if the program handles a combination of digits and special characters.")
     @Test
     public void testWithSpecialCharacters() {
